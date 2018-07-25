@@ -1,8 +1,8 @@
-var http = require("http");
+var http = require('http');
 
 var JSCafe = {
   request : function(url, callback){
-    http.get(url,function(res)){
+    http.get(url, function(res){
       res.setEncoding('utf-8');
       var buffer = '';
       res.on('readable', function(){
@@ -23,4 +23,4 @@ var JSCafe = {
   }
 };
 
-module.export = JScafe;  // 指定されたURLページをコールバックで取得する
+module.exports = JSCafe;  // 指定されたURLページをコールバックで取得する
