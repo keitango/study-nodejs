@@ -1,4 +1,4 @@
-var http = reqire('http');
+var http = require('http');
 var emitter = require('events').EventEmitter;
 var util = require('util');
 
@@ -11,7 +11,7 @@ util.inherits(JSCafe, emitter);  // event emitterを継承
 JSCafe.prototype.request = function(url){
   var self = this;
   http.get(url, function(res){
-    res.setEncode("utf-8");
+    res.setEncoding("utf-8");
     var buffer = '';
     res.on('readable', function(){
       buffer += res.read();
@@ -26,4 +26,4 @@ JSCafe.prototype.request = function(url){
   return self;
 };
 
-module.esports = JSCafe;
+module.exports = JSCafe;
