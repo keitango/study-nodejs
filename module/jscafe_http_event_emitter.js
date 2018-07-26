@@ -1,5 +1,5 @@
 var http = reqire('http');
-var emitter = require('events').EventEmitter;  // イベント駆動
+var emitter = require('events').EventEmitter;
 var util = require('util');
 
 function JSCafe(){
