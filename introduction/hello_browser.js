@@ -4,7 +4,9 @@ var http = require("http");
 // httpモジュールのcreateServerメソッドを呼び出し，サーバーを作成する
 var server = http.createServer(function(req, res){
   // サーバーリクエスト時の動作を定義する
-  res.writeHead(200, {'Content-Type':'text/plain'});
+  res.writeHead(200, {'Content-Type':'text/plain'});  // httpヘッダを書き出す
+                                                      // 第一引数 : ステータスコード
+                                                      // 第二引数 : ヘッダ情報
   res.write('hello nodejs');
   res.end();
 });
